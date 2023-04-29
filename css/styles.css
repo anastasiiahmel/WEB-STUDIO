@@ -503,6 +503,8 @@ button {
     text-decoration: none;
     color: var(--color-iris, #4d5ae5);
   }
+  .header-container {
+  }
 
   .header-logo {
     font-family: "Raleway", sans-serif;
@@ -528,44 +530,55 @@ button {
     position: fixed;
     top: 0;
     z-index: 3;
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     padding: 24px 24px 0px 40px;
-    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+  }
+  .mob-menu .is-hidden {
+    transform: translate(-50%, -50%) scaleY(0) rotate(2);
   }
 
-  .modal-icon {
-  }
-  .mob-menu-list {
-    margin-bottom: 284px;
+  .mob-open-btn {
+    background-color: none;
   }
 
-  .mob-menu-item {
-  }
   .mob-menu-text {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    transition: color var(--transition);
   }
   .mob-menu-item:not(:last-child) {
     margin-bottom: 40px;
   }
-
+  .header-container {
+  }
   .mob-menu-text:hover,
   .mob-menu-text:focus {
     color: #404bbf;
   }
-  .mob-menu-contacts {
-  }
-  .mob-menu-contacts-list {
-  }
+
   .mob-menu-contacts-item {
     margin-bottom: 40px;
   }
-
+  .mob-menu-contacts-link {
+    transition: color var(--transition);
+  }
+  .mob-menu-contacts-link:hover,
+  .mob-menu-contacts-link:focus {
+    color: #404bbf;
+  }
+  .mob-menu-contacts-mail:hover,
+  .mob-menu-contacts-mail:focus {
+    color: #404bbf;
+  }
   .mob-menu-contacts-mail {
     font-weight: 500;
     font-size: 20px;
@@ -573,8 +586,13 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color var(--transition);
   }
-
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
   .mob-menu-contacts-link {
     font-weight: 700;
     font-size: 36px;
@@ -612,6 +630,52 @@ button {
   .mob-close-btn {
     background-color: #e7e9fc;
   }
+  .mob-soc-list {
+    display: flex;
+    gap: 56px;
+  }
+  .mob-soc-item {
+    width: 40px;
+    height: 40px;
+    gap: 16px;
+  }
+  .mob-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition);
+  }
+  .menu-btn {
+    background-color: transparent;
+    position: absolute;
+    top: auto;
+    left: 70%;
+    transform: translate(100%, -80%);
+  }
+  .menu-btn-icon {
+    stroke: #2e2f42;
+  }
+  .footer-soc-link:hover,
+  .footer-soc-link:focus {
+    background-color: #31d0aa;
+  }
+  .mob-soc-icon {
+    fill: var(--color-white);
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-soc {
+    margin-bottom: 72px;
+  }
+  .footer-soc-cont {
+    display: flex;
+  }
+
   /*-------------------------hero----------------------------------*/
   .hero {
     background-color: var(--color-grey, #2e2f42);
@@ -1235,12 +1299,45 @@ button {
     position: absolute;
   }
 }
+
 /* ----------------------------------TABLET---------------------------------------------*/
 @media screen and (min-width: 768px) {
   @media screen and (min-width: 768px) {
     .container {
       width: 768px;
     }
+  }
+  .header {
+    background: var(--color-white, #ffffff);
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .header-logo-web {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-iris, #4d5ae5);
+  }
+
+  .header-logo {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-grey, #2e2f42);
   }
 
   .header-text {
@@ -1251,6 +1348,75 @@ button {
     color: var(--color-grey, #2e2f42);
     transition: color var(--transition);
     padding: 27px 0px;
+  }
+  .studio::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+  .studio {
+    position: relative;
+    color: var(--color-ocean);
+  }
+  .header-text:hover,
+  .header-text:focus {
+    color: var(--color-ocean);
+  }
+
+  .header-contacts {
+    font-style: normal;
+
+    margin-left: auto;
+  }
+  .header-nav {
+    display: flex;
+  }
+  .header-menu {
+    display: flex;
+    gap: 40px;
+    margin-left: 76px;
+  }
+  .header-container {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+  .contact {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-slate, #434455);
+    font-style: normal;
+    transition: color var(--transition);
+  }
+  .contact:hover,
+  .contact:focus {
+    color: var(--color-ocean, #404bbf);
+  }
+  .header-list {
+    align-items: center;
+    display: inline-flex;
+    gap: 40px;
+  }
+  .mob-menu,
+  .menu-btn {
+    display: none;
+  }
+  .header-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-grey, #2e2f42);
+    transition: color var(--transition);
+    padding: 45px 0px;
   }
   .studio::after {
     position: absolute;
@@ -1305,8 +1471,11 @@ button {
   }
   .header-list {
     align-items: center;
-    display: inline-flex;
+    display: block;
     gap: 40px;
+  }
+  .header-contact:not(:last-child) {
+    margin-bottom: 12px;
   }
   /*-------------------------hero----------------------------------*/
   .hero {
@@ -1574,6 +1743,8 @@ button {
     width: 16px;
     height: 16px;
   }
+
+  /*------------------------footer-------------------------------*/
   .footer {
     background: var(--color-grey, #2e2f42);
     padding-top: 100px;
@@ -1982,6 +2153,20 @@ button {
   @media screen and (min-width: 1158px) {
     .container {
       width: 1158px;
+    }
+    .header-list {
+      align-items: center;
+      display: flex;
+      gap: 40px;
+    }
+    .header-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: var(--color-grey, #2e2f42);
+      transition: color var(--transition);
+      padding: 35px 0px;
     }
     /* -------------------------examples--------------------------------*/
     .examples {

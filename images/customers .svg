@@ -42,5 +42,8 @@
 <symbol id="icon-subscribe" viewBox="0 0 38 32">
 <path d="M38.411-0.005l-38.411 18.005 12.276 3.788 18.933-14.791-14.401 16.19 0.011 0.005-0.014-0.005v8.817l6.884-6.693 8.723 2.692 6-28.008z"></path>
 </symbol>
+<symbol id="icon-menu-btn" viewBox="0 0 47 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.3636" d="M1.961 29.157h42.969M1.961 15.617h42.969M1.961 2.078h42.969"></path>
+</symbol>
   </defs>
 </svg>
