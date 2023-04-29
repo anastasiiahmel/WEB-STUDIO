@@ -2122,6 +2122,8 @@ button {
 /* ----------------------------------not---------------------------------------------*/
 @media screen and (max-width: 1157px) {
   .footer-soc-cont {
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 72px 24px;
     max-width: 550px;
