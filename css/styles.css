@@ -85,10 +85,7 @@ button {
   padding: 0 15px;
   margin: 0 auto;
 }
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
+
 /*-------------------------------------------------------------header--------------------------------------------------------------*/
 
 /* .header {
@@ -633,7 +630,7 @@ button {
   }
   .mob-soc-list {
     display: flex;
-    gap: 30px;
+    gap: 56px;
   }
   .mob-soc-item {
     width: 40px;
@@ -1306,13 +1303,11 @@ button {
     }
     .section {
       padding-bottom: 96px;
-      padding-top: 96x;
+      padding-top: 96px;
     }
   }
   .header {
     background: var(--color-white, #ffffff);
-    padding-top: 16px;
-    padding-bottom: 16px;
   }
 
   .header-logo-web {
@@ -1349,7 +1344,7 @@ button {
     letter-spacing: 0.02em;
     color: var(--color-grey, #2e2f42);
     transition: color var(--transition);
-    padding: 27px 0px;
+    padding: 24px 0px;
   }
   .studio::after {
     position: absolute;
@@ -1418,7 +1413,7 @@ button {
     letter-spacing: 0.02em;
     color: var(--color-grey, #2e2f42);
     transition: color var(--transition);
-    padding: 38px 0px;
+    padding: 27px 0px;
   }
   .studio::after {
     position: absolute;
@@ -1476,9 +1471,11 @@ button {
     display: block;
     gap: 40px;
   }
-  .header-contact:not(:last-child) {
-    margin-bottom: 12px;
+
+  .header-contact {
+    margin-top: 12px;
   }
+
   /*-------------------------hero----------------------------------*/
   .hero {
     background-color: var(--color-grey, #2e2f42);
@@ -1853,18 +1850,18 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .footer-email {
-    width: 100%;
+    width: 264px;
     height: 40px;
     outline: transparent;
     border: 1px solid #ffffff;
     border-radius: 4px;
-
+    padding-left: 16px;
     font-weight: 400;
     font-size: 12px;
-    margin-bottom: 16px;
+
     background: #2e2f42;
     color: #ffffff;
   }
@@ -2126,18 +2123,27 @@ button {
     .container {
       width: 1158px;
     }
-
+    .section {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
     .header-list {
       align-items: center;
       display: flex;
       gap: 40px;
     }
+    .header {
+      background: var(--color-white, #ffffff);
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
     .header-text {
       font-weight: 500;
       font-size: 16px;
       line-height: 1.5;
       letter-spacing: 0.02em;
-      color: var(--color-grey, #2e2f42);
+
       transition: color var(--transition);
       padding: 27px 0px;
     }
@@ -2169,6 +2175,7 @@ button {
       letter-spacing: 0.02em;
       color: #2e2f42;
     }
+
     .features-item {
       font-weight: 400;
       font-size: 16px;
@@ -2226,9 +2233,11 @@ button {
 @media screen and (max-width: 1157px) {
   .section {
     padding-bottom: 96px;
-    padding-top: 96x;
+    padding-top: 96px;
   }
-
+  .header-contact:not(:last-child) {
+    margin-bottom: 12px;
+  }
   .team-list {
     display: flex;
     flex-wrap: wrap;
